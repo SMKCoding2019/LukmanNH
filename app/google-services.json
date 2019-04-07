@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "975620865720",
+    "firebase_url": "https://jastiplon.firebaseio.com",
+    "project_id": "jastiplon",
+    "storage_bucket": "jastiplon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975620865720:android:9c11897b2ff80604",
+        "android_client_info": {
+          "package_name": "smktelkom_mlg.sch.id.tiplon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975620865720-c41ps904n151c7kv6n56o0ohe23jsurd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "smktelkom_mlg.sch.id.tiplon",
+            "certificate_hash": "3adba8438fed1f9bfd7ac6f8d742f3448a22a0d2"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiQJFZhQLO-Z0J2PZfrSpOaboY7x8ofh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975620865720-1hme3jv4bf4smthnj527cltm2pdpamjt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
-# LukmanNH
+# Laundry
 
+Aplikasi yang mempermudah para user untuk laundry :)
 
 
 

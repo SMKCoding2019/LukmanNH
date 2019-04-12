@@ -1,7 +1,7 @@
 # Laundry
 
-Aplikasi yang mempermudah para user untuk laundry :)
-
+Aplikasi yang mempermudah para pengguna untuk laundry tanpa harus keluar rumah.
+terdapat dua aplikasi yaitu Client-side serta Server-side.
 
 
 

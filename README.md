@@ -16,3 +16,10 @@ terdapat dua aplikasi yaitu Client-side serta Server-side.
 ![alt_text](https://github.com/SMKCoding2019/LukmanNH/blob/master/ss/3.jpg)
 
 ![alt_text](https://github.com/SMKCoding2019/LukmanNH/blob/master/ss/4.jpg)
+
+![alt_text](https://github.com/SMKCoding2019/LukmanNH/blob/master/ss/5.jpg)
+
+![alt_text](https://github.com/SMKCoding2019/LukmanNH/blob/master/ss/6.jpg)
+
+![alt_text](https://github.com/SMKCoding2019/LukmanNH/blob/master/ss/7.jpg)
+

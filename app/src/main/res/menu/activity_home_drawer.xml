@@ -11,16 +11,16 @@
             android:title="Home" />
 
         <item
-            android:id="@+id/nav_price"
-            android:icon="@drawable/ic_attach_money_black_24dp"
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
             android:iconTint="@android:color/white"
-            android:title="Price List" />
+            android:title="Cart" />
 
         <item
-            android:id="@+id/nav_service"
-            android:icon="@drawable/ic_local_laundry_service_black_24dp"
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_access_time_black_24dp"
             android:iconTint="@android:color/white"
-            android:title="Service" />
+            android:title="Orders" />
 
         <item
             android:id="@+id/nav_sign_out"

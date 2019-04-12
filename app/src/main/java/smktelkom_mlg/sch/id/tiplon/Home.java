@@ -28,6 +28,7 @@ import com.squareup.picasso.Picasso;
 import smktelkom_mlg.sch.id.tiplon.Common.Common;
 import smktelkom_mlg.sch.id.tiplon.Interface.ItemClickListener;
 import smktelkom_mlg.sch.id.tiplon.Model.Category;
+import smktelkom_mlg.sch.id.tiplon.Service.ListenOrder;
 import smktelkom_mlg.sch.id.tiplon.ViewHolder.MenuViewHolder;
 
 public class Home extends AppCompatActivity
@@ -40,6 +41,8 @@ public class Home extends AppCompatActivity
 
     RecyclerView recycler_menu;
     RecyclerView.LayoutManager layoutManager;
+
+    FirebaseRecyclerAdapter<Category, MenuViewHolder> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +64,8 @@ public class Home extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent cartIntent = new Intent(Home.this,Cart.class);
+                startActivity(cartIntent);
             }
         });
 
@@ -88,11 +91,16 @@ public class Home extends AppCompatActivity
         
         loadMenu();
 
+        Intent service = new Intent(Home.this, ListenOrder.class);
+        startService(service);
+
 
     }
 
     private void loadMenu() {
-        FirebaseRecyclerAdapter<Category, MenuViewHolder> adapter = new FirebaseRecyclerAdapter<Category, MenuViewHolder>(Category.class,R.layout.menu_item,MenuViewHolder.class,category) {
+        adapter = new FirebaseRecyclerAdapter<Category, MenuViewHolder>(Category.class,
+                R.layout.menu_item,
+                MenuViewHolder.class,category) {
             @Override
             protected void populateViewHolder(MenuViewHolder viewHolder, Category model, int position) {
                 viewHolder.txtMenuName.setText(model.getName());
@@ -102,7 +110,12 @@ public class Home extends AppCompatActivity
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(Home.this, ""+clickItem.getName(), Toast.LENGTH_SHORT).show();
+                        // Get LaundryID and send to new Activity
+
+                        Intent laundryList= new Intent(Home.this,LaundryList.class);
+                        // Coz LaundryId is a key, so we just get key fo this item
+                        laundryList.putExtra("LaundryId",adapter.getRef(position).getKey());
+                        startActivity(laundryList);
                     }
                 });
             }
@@ -150,10 +163,12 @@ public class Home extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             Toast.makeText(this, "Home Activity", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_price) {
-            Toast.makeText(this, "Price List Activity", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_service){
-            Toast.makeText(this, "Service Activity", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_cart) {
+            Intent cartIntent = new Intent(Home.this,Cart.class);
+            startActivity(cartIntent);
+        } else if (id == R.id.nav_orders){
+            Intent orderIntent = new Intent(Home.this,OrderStatus.class);
+            startActivity(orderIntent);
         } else if (id == R.id.nav_sign_out){
             Intent signIn = new Intent(Home.this,SignIn.class);
             signIn.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);

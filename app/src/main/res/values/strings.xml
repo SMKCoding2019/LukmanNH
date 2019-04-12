@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tiplon</string>
+    <string name="app_name">LaundryMan</string>
     <string name="slogan">you leave it we clean it!</string>
     <string name="title_activity_home">Home</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
